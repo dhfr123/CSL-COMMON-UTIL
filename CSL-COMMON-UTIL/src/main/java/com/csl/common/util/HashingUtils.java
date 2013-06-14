@@ -17,11 +17,15 @@ public class HashingUtils {
     }
 
     public static String getHashSHA(String sha) {
-        return DigestUtils.shaHex(sha);
+        return DigestUtils.sha1Hex(sha);
     }
 
     public static String getHashMD5(String md5) {
         return DigestUtils.md5Hex(md5);
+    }
+
+    public static String getHashMD2(String md2) {
+        return DigestUtils.md2Hex(md2);
     }
 
     public static String getHashSHA512(String sha512) {
