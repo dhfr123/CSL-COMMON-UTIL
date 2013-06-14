@@ -30,10 +30,9 @@ public class RandomUtils {
         return  string;
     }
     
-    
     /**
      * Generate random number 
-     * @return Object if the length betwwen 1 - 19 it will return Long type, but if the length between 20 - 100 it will return string.
+     * @return Object if the length betwwen 1 - 19 it will return Long type, but if the length between 20 - 99 it will return string.
      * @param length the length of random number, maximum length is 100
      */
     public static Object getRandomNumber(Integer length) throws Exception{
@@ -48,7 +47,11 @@ public class RandomUtils {
             String number = getRandomLong().toString().substring(0, length);
             return Long.parseLong(number);
             
-        }else if(length.compareTo(101) < 0 && length.compareTo(19) > 0){
+        }else if(length.compareTo(76) < 0 && length.compareTo(19) > 0){
+            String number = getRandomLong(3).toString().substring(0, length);
+            return number;
+            
+        }else if(length.compareTo(100) < 0 && length.compareTo(75) > 0){
             String number = getRandomLong(5).toString().substring(0, length);
             return number;
             
@@ -57,6 +60,5 @@ public class RandomUtils {
         }
         
     }
-    
     
 }
