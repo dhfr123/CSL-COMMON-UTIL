@@ -10,7 +10,7 @@ import java.text.ParseException;
 import java.util.Locale;
 
 /**
- * NumberFormater untuk memformat dan mempasring dari String dan number class
+ * NumberFormatter untuk memformat dan mempasring dari String dan number class
  * ini dimange oleh spring.
  *
  * @author Deni Husni Fahri Rizal
@@ -21,7 +21,7 @@ import java.util.Locale;
  * @param activeLocale locale yang active atau dipake di apliaksi bisa di ambil
  * dari session apliaksi atau local sessison apliaksi
  */
-public class NumberFormater {
+public class NumberFormatter {
 
     private Integer minFractionDigit;
     private Integer maxFractionDigit;

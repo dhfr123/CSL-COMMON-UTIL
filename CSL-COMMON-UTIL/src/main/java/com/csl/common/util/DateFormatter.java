@@ -10,11 +10,11 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Class DateFormater dimanage by Spring.
+ * Class DateFormatter dimanage by Spring.
  * <p> Class untuk memformat Date dan memparsing String menjadi Date.
  * @author Deni Husni Fahri Rizal
  */
-public class DateFormater {
+public class DateFormatter {
 
     private String defaultLocale;
     private String datePattern;

@@ -4,7 +4,7 @@
  */
 package com.csl.common.service;
 
-import com.csl.common.util.DateFormater;
+import com.csl.common.util.DateFormatter;
 
 /**
  *
@@ -17,7 +17,7 @@ public class Tester {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        DateFormater dateFormater=  (DateFormater)CommonUtilService.getService("dateFormater");
+        DateFormatter dateFormater=  (DateFormatter)CommonUtilService.getService("dateFormater");
         System.out.println(dateFormater.getDayPattern());
     }
 }
