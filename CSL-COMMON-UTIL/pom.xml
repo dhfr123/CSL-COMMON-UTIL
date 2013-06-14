@@ -8,12 +8,34 @@
     <packaging>jar</packaging>
 
     <name>CSL-COMMON-UTIL</name>
-    <url>http://maven.apache.org</url>
+    <url>http://ciptasrigatilestari.co.id</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springframework-version>3.1.4.RELEASE</springframework-version>
     </properties>
-
+    <developers>
+        <developer>
+            <name>Deni Husni Fahri Rizal</name>
+            <email>deni.fahri@ciptasrigatilestari.co.id</email>
+            <organization>CSL</organization>
+            <organizationUrl>http://www.ciptasrigatilestari.co.id</organizationUrl>
+            <roles>
+                <role>Project Owner</role>
+                <role>Lead of Developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Satrio Aditya</name>
+            <email>satrio.aditya@ciptasrigatilestari.co.id</email>
+            <organization>CSL</organization>
+            <organizationUrl>http://www.ciptasrigatilestari.co.id</organizationUrl>
+            <roles>
+                <role>Developer</role>
+                <role>Technical Writer</role>
+            </roles>
+        </developer>
+    </developers>
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -45,6 +67,57 @@
             <artifactId>gson</artifactId>
             <version>2.2.4</version>
         </dependency>
-            
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework-version}</version>
+<!--            <exclusions>
+                Exclude Commons Logging in favor of SLF4j 
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>-->
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.2</version>
+        </dependency>
+<!--        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>3.1.0.GA</version>
+        </dependency>-->
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
