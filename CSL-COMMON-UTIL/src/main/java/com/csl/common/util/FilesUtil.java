@@ -107,7 +107,7 @@ public class FilesUtil {
      * Copies a file to a new location. 
      * @return void copied file
      * @param source source path
-     * @param destination destination path to copy
+     * @param destination destination path to be copied
      */
     public static void copyFileToFile(File source, File destination) throws IOException {
         FileUtils.copyFile(source, destination);
@@ -123,12 +123,23 @@ public class FilesUtil {
         FileUtils.copyFileToDirectory(sourceFile, dirDestination);
     }
     
+    /**
+     * Deletes a file. If file is a directory, delete it and all sub-directories. 
+     * @return void 
+     * @param file file or directory to delete, must not be null
+     */
     public static void deleteFile(File file) throws IOException {
 //        Jika berupa folder maka semua file dalam folder akan terhpus dan turunananya
         FileUtils.forceDelete(file);
       
     }
     
+    /**
+     * Moves a file. 
+     * @return void
+     * @param source source path
+     * @param dirDestination destination path to be moved
+     */
     public static void moveFile(File source, File destiantion) throws IOException{
         FileUtils.moveFile(source, destiantion);
     }
