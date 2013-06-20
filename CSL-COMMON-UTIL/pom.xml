@@ -4,10 +4,10 @@
 
     <groupId>com.csl.common.util</groupId>
     <artifactId>csl-common-util</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RELEASE</version>
     <packaging>jar</packaging>
 
-    <name>CSL-COMMON-UTIL</name>
+    <name>csl-common-util</name>
     <url>http://ciptasrigatilestari.co.id</url>
 
     <properties>
@@ -48,9 +48,9 @@
             <version>2.4</version>
         </dependency>
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
         </dependency>
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -71,7 +71,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${springframework-version}</version>
-                        <exclusions>
+            <exclusions>
                 <!--Exclude Commons Logging in favor of SLF4j--> 
                 <exclusion>
                     <groupId>commons-logging</groupId>
@@ -86,8 +86,8 @@
         </dependency>
         <dependency>
             <groupId>com.csl.commonloging</groupId>
-            <artifactId>Common-Loging</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <artifactId>csl-common-loging</artifactId>
+            <version>1.0-RELEASE</version>
         </dependency>
     </dependencies>
     <build>
