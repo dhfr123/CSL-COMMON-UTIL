@@ -18,7 +18,28 @@ import org.joda.time.Years;
  * @author Deni Husni FR
  */
 public class DateTimeUtil {
-
+    
+    /**
+     * <p>Get Past or Future date based on paramater amount.</p>
+     * <p><b>parameter amount :</b> use negative symbol to get past date, use positive symbol to get future date</p>
+     * <p><b>parameter param :</b> the type of times that will be added</p>
+     * <p><b>param type :</b></p>
+     * <ul>
+     * <li>day</li>
+     * <li>hours</li>
+     * <li>millisecond</li>
+     * <li>minutes</li>
+     * <li>month</li>
+     * <li>second</li>
+     * <li>year</li>
+     * <li>week</li>
+     * </ul>
+     * 
+     * @return Date Date 
+     * @param date Date
+     * @param amount Integer
+     * @param param String
+     */
     public static Date getDateFromWithParam(Date date, int amount, String param) {
         if (param.equalsIgnoreCase(CommonUtilConstant.DAY)) {
             return DateUtils.addDays(date, amount);
@@ -49,33 +70,76 @@ public class DateTimeUtil {
         return null;
     }
 
+    /**
+     * Check from two date object, will return true if the date have the same value.
+     * @return Boolean 
+     * @param date1 Date
+     * @param date2 Date
+     */
     public static Boolean isSameDateWithTimeIgnore(Date date1, Date date2) {
         return DateUtils.isSameDay(date1, date2);
     }
 
+    /**
+     * Check from two date object ( included time ), will return true if the date have the same value.
+     * @return Boolean 
+     * @param date1 Date
+     * @param date2 Date
+     */
     public static Boolean isSameDateTime(Date date1, Date date2) {
         return DateUtils.isSameInstant(date1, date2);
     }
 
+    /**
+     * get total time (Age) based on parameter date
+     * @return Integer
+     * @param birthDate Date
+     */
     public static Integer getAge(Date birthdate) {
         DateMidnight date1 = new DateMidnight(birthdate);
         DateTime now = new DateTime();
         return Years.yearsBetween(date1, now).getYears();
     }
 
+    /**
+     * get total days, between two date object
+     * @return Integer
+     * @param date1 Date
+     * @param date2 Date
+     */
     public static Integer getTotalDayDifference(Date date1, Date date2) {
         return Days.daysBetween(new DateMidnight(date1), new DateMidnight(date2)).getDays();
     }
 
+    /**
+     * get total Months, between two date object
+     * @return Integer
+     * @param date1 Date
+     * @param date2 Date
+     */
     public static Integer getTotalMonthDifference(Date date1, Date date2) {
         return Months.monthsBetween(new DateMidnight(date1), new DateMidnight(date2)).getMonths();
     }
 
+    /**
+     * get total years, between two date object
+     * @return Integer
+     * @param date1 Date
+     * @param date2 Date
+     */
     public static Integer getToalYearDifference(Date date1, Date date2) {
         return Years.yearsBetween(new DateMidnight(date1), new DateMidnight(date2)).getYears();
     }
 
-    public static Integer getTotalWorkingDay(Date startDate, Date endDate, int totalPulicHoliday, int totalAnualLeave) {
+    /**
+     * get total working days, 
+     * @return Integer
+     * @param starDate Date
+     * @param endDate Date
+     * @param totalPublicHoliday int, the amount of public 
+     * @param totalAnnualLeave int
+     */
+    public static Integer getTotalWorkingDay(Date startDate, Date endDate, int totalPublicHoliday, int totalAnnualLeave) {
         DateTime start = new DateTime(startDate);
         DateTime end = new DateTime(endDate);
         int satSun = 0;
@@ -94,6 +158,6 @@ public class DateTimeUtil {
             }
         }
         int totalWorkingDays = numOfDays - satSun;
-        return totalWorkingDays - totalAnualLeave - totalPulicHoliday;
+        return totalWorkingDays - totalAnnualLeave - totalPublicHoliday;
     }
 }
