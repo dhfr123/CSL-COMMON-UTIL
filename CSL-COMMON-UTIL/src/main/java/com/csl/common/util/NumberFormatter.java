@@ -51,43 +51,101 @@ public class NumberFormatter {
         this.defaultLocale = defaultLocale;
     }
 
-    public String getNumberAsStringDefaultLocale(Number number, String typeIntance) {
-        NumberFormat nf = getNumberFormat(typeIntance, new Locale(defaultLocale));
+    /**
+     * <p>Get number format with default locale.</p> 
+     * <p>the maximal and minimal fraction are configured in application.properties</p>
+     * <p>typeInstance - Type number format</p>
+     * <ul>
+     * <li>number</li>
+     * <li>currency</li>
+     * <li>percent</li>
+     * </ul>
+     * 
+     * @return String number format
+     * @param number number reference
+     * @param typeInstance type of number format
+     */
+    public String getNumberAsStringDefaultLocale(Number number, String typeInstance) {
+        NumberFormat nf = getNumberFormat(typeInstance, new Locale(defaultLocale));
         nf.setMaximumFractionDigits(maxFractionDigit);
         nf.setMinimumFractionDigits(minFractionDigit);
         return nf.format(number);
     }
 
-    public String getNumberAsStringActiveLocale(Number number, Locale locale, String typeIntance) {
-        NumberFormat nf = getNumberFormat(typeIntance, locale);
+    /**
+     * <p>Get number format with specific locale.</p> 
+     * <p>the maximal and minimal fraction are configured in application.properties</p>
+     * <p>typeInstance - Type number format</p>
+     * <ul>
+     * <li>number</li>
+     * <li>currency</li>
+     * <li>percent</li>
+     * </ul>
+     * 
+     * @return String number format
+     * @param number number reference
+     * @param locale Locale reference
+     * @param typeInstance type of number format
+     */
+    public String getNumberAsStringActiveLocale(Number number, Locale locale, String typeInstance) {
+        NumberFormat nf = getNumberFormat(typeInstance, locale);
         nf.setMaximumFractionDigits(maxFractionDigit);
         nf.setMinimumFractionDigits(minFractionDigit);
         return nf.format(number);
     }
 
-    public Number getNumberDefaultLocale(String inputNumber, String typeIntance) throws ParseException {
-        NumberFormat nf = getNumberFormat(typeIntance, new Locale(defaultLocale));
+    /**
+     * <p>Get number format with default locale.</p> 
+     * <p>the maximal and minimal fraction are configured in application.properties</p>
+     * <p>typeInstance - Type number format</p>
+     * <ul>
+     * <li>number</li>
+     * <li>currency</li>
+     * <li>percent</li>
+     * </ul>
+     * 
+     * @return Number number format
+     * @param number number reference
+     * @param typeInstance type of number format
+     */
+    public Number getNumberDefaultLocale(String inputNumber, String typeInstance) throws ParseException {
+        NumberFormat nf = getNumberFormat(typeInstance, new Locale(defaultLocale));
         nf.setMaximumFractionDigits(maxFractionDigit);
         nf.setMinimumFractionDigits(minFractionDigit);
         return nf.parse(inputNumber);
     }
 
-    public Number getNumberActiveLocale(String inputNumber, Locale locale, String typeIntance) throws ParseException {
-        NumberFormat nf = getNumberFormat(typeIntance, locale);
+    /**
+     * <p>Get number format with specific locale.</p> 
+     * <p>the maximal and minimal fraction are configured in application.properties</p>
+     * <p>typeInstance - Type number format</p>
+     * <ul>
+     * <li>number</li>
+     * <li>currency</li>
+     * <li>percent</li>
+     * </ul>
+     * 
+     * @return String number format
+     * @param number number reference
+     * @param locale Locale reference
+     * @param typeInstance type of number format
+     */
+    public Number getNumberActiveLocale(String inputNumber, Locale locale, String typeInstance) throws ParseException {
+        NumberFormat nf = getNumberFormat(typeInstance, locale);
         nf.setMaximumFractionDigits(maxFractionDigit);
         nf.setMinimumFractionDigits(minFractionDigit);
         return nf.parse(inputNumber);
     }
 
-    private NumberFormat getNumberFormat(String typeIntance, Locale locale) {
+    private NumberFormat getNumberFormat(String typeInstance, Locale locale) {
         NumberFormat nf = null;
-        if (typeIntance.equalsIgnoreCase(CommonUtilConstant.NUMBER_FORMAT_TYPE_NUMBER)) {
+        if (typeInstance.equalsIgnoreCase(CommonUtilConstant.NUMBER_FORMAT_TYPE_NUMBER)) {
             nf = NumberFormat.getNumberInstance(locale);
         }
-        if (typeIntance.equalsIgnoreCase(CommonUtilConstant.NUMBER_FORMAT_TYPE_PERCENT)) {
+        if (typeInstance.equalsIgnoreCase(CommonUtilConstant.NUMBER_FORMAT_TYPE_PERCENT)) {
             nf = NumberFormat.getPercentInstance(locale);
         }
-        if (typeIntance.equalsIgnoreCase(CommonUtilConstant.NUMBER_FORMAT_TYPE_CURRENCY)) {
+        if (typeInstance.equalsIgnoreCase(CommonUtilConstant.NUMBER_FORMAT_TYPE_CURRENCY)) {
             nf = NumberFormat.getCurrencyInstance(locale);
         }
         return nf;
