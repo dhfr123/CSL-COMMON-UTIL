@@ -36,9 +36,9 @@ public class DateTimeUtil {
      * </ul>
      * 
      * @return Date Date 
-     * @param date Date
-     * @param amount Integer
-     * @param param String
+     * @param date Date reference
+     * @param amount Integer reference
+     * @param param String reference
      */
     public static Date getDateFromWithParam(Date date, int amount, String param) {
         if (param.equalsIgnoreCase(CommonUtilConstant.DAY)) {
@@ -73,8 +73,8 @@ public class DateTimeUtil {
     /**
      * Checking from two date objects, will return true if the date have the same value.
      * @return Boolean 
-     * @param date1 Date
-     * @param date2 Date
+     * @param date1 Date reference
+     * @param date2 Date reference
      */
     public static Boolean isSameDateWithTimeIgnore(Date date1, Date date2) {
         return DateUtils.isSameDay(date1, date2);
@@ -83,8 +83,8 @@ public class DateTimeUtil {
     /**
      * Checking from two date objects ( included time ), will return true if the date have the same value.
      * @return Boolean 
-     * @param date1 Date
-     * @param date2 Date
+     * @param date1 Date reference
+     * @param date2 Date reference
      */
     public static Boolean isSameDateTime(Date date1, Date date2) {
         return DateUtils.isSameInstant(date1, date2);
@@ -93,7 +93,7 @@ public class DateTimeUtil {
     /**
      * get total times (Age) based on parameter date
      * @return Integer
-     * @param birthDate Date
+     * @param birthDate Date reference
      */
     public static Integer getAge(Date birthdate) {
         DateMidnight date1 = new DateMidnight(birthdate);
@@ -104,8 +104,8 @@ public class DateTimeUtil {
     /**
      * get total days, between two date object
      * @return Integer
-     * @param date1 Date
-     * @param date2 Date
+     * @param date1 Date reference
+     * @param date2 Date reference
      */
     public static Integer getTotalDayDifference(Date date1, Date date2) {
         return Days.daysBetween(new DateMidnight(date1), new DateMidnight(date2)).getDays();
@@ -114,8 +114,8 @@ public class DateTimeUtil {
     /**
      * get total Months, between two date object
      * @return Integer
-     * @param date1 Date
-     * @param date2 Date
+     * @param date1 Date reference
+     * @param date2 Date reference
      */
     public static Integer getTotalMonthDifference(Date date1, Date date2) {
         return Months.monthsBetween(new DateMidnight(date1), new DateMidnight(date2)).getMonths();
@@ -124,8 +124,8 @@ public class DateTimeUtil {
     /**
      * get total years, between two date object
      * @return Integer
-     * @param date1 Date
-     * @param date2 Date
+     * @param date1 Date reference
+     * @param date2 Date reference
      */
     public static Integer getToalYearDifference(Date date1, Date date2) {
         return Years.yearsBetween(new DateMidnight(date1), new DateMidnight(date2)).getYears();
@@ -134,8 +134,8 @@ public class DateTimeUtil {
     /**
      * get total working days 
      * @return Integer
-     * @param starDate Date
-     * @param endDate Date
+     * @param starDate Date reference
+     * @param endDate Date reference
      * @param totalPublicHoliday int, total of public holiday
      * @param totalAnnualLeave int, total of annual leave
      */
