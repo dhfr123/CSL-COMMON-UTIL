@@ -10,8 +10,8 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Class DateFormatter dimanage by Spring.
- * <p> Class untuk memformat Date dan memparsing String menjadi Date.
+ * Class DateFormatter is managed by Spring.
+ * <p> Class for format Date and  parse String to Date.</p>
  * @author Deni Husni Fahri Rizal
  */
 public class DateFormatter {
