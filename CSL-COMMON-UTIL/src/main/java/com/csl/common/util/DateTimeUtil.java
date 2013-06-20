@@ -35,7 +35,7 @@ public class DateTimeUtil {
      * <li>week</li>
      * </ul>
      * 
-     * @return Date Date 
+     * @return Date result of past or future date
      * @param date Date reference
      * @param amount Integer reference
      * @param param String reference
