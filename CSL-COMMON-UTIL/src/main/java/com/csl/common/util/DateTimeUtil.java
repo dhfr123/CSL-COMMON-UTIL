@@ -20,7 +20,7 @@ import org.joda.time.Years;
 public class DateTimeUtil {
     
     /**
-     * <p>Get Past or Future date based on paramater amount.</p>
+     * <p>Get Past or Future date based on parameter amount.</p>
      * <p><b>parameter amount :</b> use negative symbol to get past date, use positive symbol to get future date</p>
      * <p><b>parameter param :</b> the type of times that will be added</p>
      * <p><b>param type :</b></p>
@@ -71,7 +71,7 @@ public class DateTimeUtil {
     }
 
     /**
-     * Check from two date object, will return true if the date have the same value.
+     * Checking from two date objects, will return true if the date have the same value.
      * @return Boolean 
      * @param date1 Date
      * @param date2 Date
@@ -81,7 +81,7 @@ public class DateTimeUtil {
     }
 
     /**
-     * Check from two date object ( included time ), will return true if the date have the same value.
+     * Checking from two date objects ( included time ), will return true if the date have the same value.
      * @return Boolean 
      * @param date1 Date
      * @param date2 Date
@@ -91,7 +91,7 @@ public class DateTimeUtil {
     }
 
     /**
-     * get total time (Age) based on parameter date
+     * get total times (Age) based on parameter date
      * @return Integer
      * @param birthDate Date
      */
@@ -132,12 +132,12 @@ public class DateTimeUtil {
     }
 
     /**
-     * get total working days, 
+     * get total working days 
      * @return Integer
      * @param starDate Date
      * @param endDate Date
-     * @param totalPublicHoliday int, the amount of public 
-     * @param totalAnnualLeave int
+     * @param totalPublicHoliday int, total of public holiday
+     * @param totalAnnualLeave int, total of annual leave
      */
     public static Integer getTotalWorkingDay(Date startDate, Date endDate, int totalPublicHoliday, int totalAnnualLeave) {
         DateTime start = new DateTime(startDate);
