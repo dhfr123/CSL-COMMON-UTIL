@@ -52,7 +52,7 @@ public class NumberFormatter {
     }
 
     /**
-     * <p>Get number format with default locale.</p> 
+     * <p>Get number format with default locale. the return value is String </p> 
      * <p>the maximal and minimal fraction are configured in application.properties</p>
      * <p>typeInstance - Type number format</p>
      * <ul>
@@ -73,7 +73,7 @@ public class NumberFormatter {
     }
 
     /**
-     * <p>Get number format with specific locale.</p> 
+     * <p>Get number format with specific locale. the return value is String </p> 
      * <p>the maximal and minimal fraction are configured in application.properties</p>
      * <p>typeInstance - Type number format</p>
      * <ul>
@@ -95,7 +95,7 @@ public class NumberFormatter {
     }
 
     /**
-     * <p>Get number format with default locale.</p> 
+     * <p>Get number format with default locale. the return value is Number </p> 
      * <p>the maximal and minimal fraction are configured in application.properties</p>
      * <p>typeInstance - Type number format</p>
      * <ul>
@@ -116,7 +116,7 @@ public class NumberFormatter {
     }
 
     /**
-     * <p>Get number format with specific locale.</p> 
+     * <p>Get number format with specific locale. the return value is Number </p> 
      * <p>the maximal and minimal fraction are configured in application.properties</p>
      * <p>typeInstance - Type number format</p>
      * <ul>
