@@ -31,7 +31,7 @@ public class RandomUtils {
     
     /**
      * Generate random number 
-     * @return Object if the length betwwen 1 - 19 it will return Long type, but if the length between 20 - 99 it will return string.
+     * @return Object if the length between 1 - 19 it will return Long type, but if the length between 20 - 99 it will return string.
      * @param length the length of random number, maximum length is 100
      */
     public static Object getRandomNumber(Integer length) throws Exception{
