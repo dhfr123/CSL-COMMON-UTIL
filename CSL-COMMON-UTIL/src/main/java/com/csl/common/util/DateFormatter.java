@@ -96,7 +96,7 @@ public class DateFormatter {
      * <p>for value of default locale and date format pattern are configured in application.properties</p>
      * 
      * @return String return value is string with pattern date dd-MMMM-yyyy
-     * @param date Date
+     * @param date the date reference
      */
     public String getDateAsStringsDefaultLocale(Date date) {
         return new SimpleDateFormat(datePattern, new Locale(defaultLocale)).format(date);
@@ -109,8 +109,8 @@ public class DateFormatter {
      * <p>for value of default locale and date format pattern are configured in application.properties</p>
      * 
      * @return String return value is string with pattern date dd-MMMM-yyyy 
-     * @param date Date
-     * @param locale Locale
+     * @param date the date reference
+     * @param locale Locale reference
      */
     public String getDateAsStringsWithActiveLocale(Date date, Locale locale) {
         return new SimpleDateFormat(datePattern, locale).format(date);
@@ -122,7 +122,7 @@ public class DateFormatter {
      * </p>for value of default locale and date format pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default full date pattern dd-MMMM-yy|hh:mm a
-     * @param date Date
+     * @param date the date reference
      */
     public String getDateFullAsStringsDefaultLocale(Date date) {
         return new SimpleDateFormat(dateFullPattern, new Locale(defaultLocale)).format(date);
@@ -134,8 +134,8 @@ public class DateFormatter {
      * <p>for value of default locale and date format pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default full date pattern dd-MMMM-yy|hh:mm a 
-     * @param date Date
-     * @param locale Locale
+     * @param date the date reference
+     * @param locale Locale reference
      */
     public String getDateFullAsStringsWithActiveLocale(Date date, Locale locale) {
         return new SimpleDateFormat(dateFullPattern, locale).format(date);
@@ -147,7 +147,7 @@ public class DateFormatter {
      * <p>for value of default locale and default time pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default time pattern hh:mm:ss
-     * @param date Date
+     * @param date the date reference
      */
     public String getTimeAsStringsDefaultLocale(Date date) {
         return new SimpleDateFormat(timePattern, new Locale(defaultLocale)).format(date);
@@ -159,8 +159,8 @@ public class DateFormatter {
      * <p>for value of default locale and default time pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default time pattern hh:mm:ss
-     * @param date Date
-     * @param locale Locale
+     * @param date the date reference
+     * @param locale Locale reference
      */
     public String getTimeAsStringsWithActiveLocale(Date date, Locale locale) {
         return new SimpleDateFormat(timePattern, locale).format(date);
@@ -172,7 +172,7 @@ public class DateFormatter {
      * for value of default locale and default month pattern are configured in application.properties
      * </p>
      * @return String return value is string with default month pattern MMMM
-     * @param date Date
+     * @param date the date reference
      */
     public String getMonthAsStringsDefaultLocale(Date date) {
         return new SimpleDateFormat(monthPattern, new Locale(defaultLocale)).format(date);
@@ -184,8 +184,8 @@ public class DateFormatter {
      * <p>for value of default locale and default month pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default month pattern MMMM
-     * @param date Date
-     * @param locale Locale
+     * @param date the date reference
+     * @param locale Locale reference
      */
     public String getMonthAsStringsWithActiveLocale(Date date, Locale locale) {
         return new SimpleDateFormat(monthPattern, locale).format(date);
@@ -197,7 +197,7 @@ public class DateFormatter {
      * <p>for value of default locale and default year pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default year pattern yyyy
-     * @param date Date
+     * @param date the date reference
      */
     public String getYearAsStringsDefaultLocale(Date date) {
         return new SimpleDateFormat(yearPattern, new Locale(defaultLocale)).format(date);
@@ -209,8 +209,8 @@ public class DateFormatter {
      * <p>for value of default locale and default year pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default year pattern yyyy
-     * @param date Date
-     * @param locale Locale
+     * @param date the date reference
+     * @param locale Locale reference
      */
     public String getYearAsStringsWithActiveLocale(Date date, Locale locale) {
         return new SimpleDateFormat(yearPattern, locale).format(date);
@@ -222,7 +222,7 @@ public class DateFormatter {
      * <p>for value of default locale, default month and year pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default month and year pattern MMMM-yyyy
-     * @param date Date
+     * @param date the date reference
      */
     public String getMonthAndYearAsStringsDefaultLocale(Date date) {
         return new SimpleDateFormat(monthAndYearPatern, new Locale(defaultLocale)).format(date);
@@ -234,8 +234,8 @@ public class DateFormatter {
      * <p>for value of default locale, default month and year pattern are configured in application.properties</p>
      * 
      * @return String return value is string with default month and year pattern MMMM-yyyy
-     * @param date Date
-     * @param locale Locale
+     * @param date the date reference
+     * @param locale Locale reference
      */
     public String getMonthAndYearAsStringsWithActiveLocale(Date date, Locale locale) {
         return new SimpleDateFormat(monthAndYearPatern, locale).format(date);
@@ -247,7 +247,7 @@ public class DateFormatter {
      * <p>for value of default locale and date format pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with pattern date dd-MMMM-yyyy
-     * @param inputDate String
+     * @param inputDate String reference
      */
     public Date getDateDefaultLocale(String inputDate) throws ParseException {
         return new SimpleDateFormat(datePattern, new Locale(defaultLocale)).parse(inputDate);
@@ -259,8 +259,8 @@ public class DateFormatter {
      * <p>for value of default locale and date format pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with pattern date dd-MMMM-yyyy
-     * @param inputDate String
-     * @param locale Locale
+     * @param inputDate String reference
+     * @param locale Locale reference
      */
     public Date getDateWithActiveLocale(String inputDate, Locale locale) throws ParseException {
         return new SimpleDateFormat(datePattern, locale).parse(inputDate);
@@ -272,7 +272,7 @@ public class DateFormatter {
      * <p>for value of default locale and format for full date pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with pattern date dd-MMMM-yy|hh:mm a
-     * @param stringDate String
+     * @param stringDate String reference
      */
     public Date getDateFullDefaultLocale(String stringDate) throws ParseException {
         return new SimpleDateFormat(dateFullPattern, new Locale(defaultLocale)).parse(stringDate);
@@ -284,8 +284,8 @@ public class DateFormatter {
      * <p>for value of default locale and format for full date pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with pattern date dd-MMMM-yy|hh:mm a
-     * @param stringDate String
-     * @param locale Locale
+     * @param stringDate String reference
+     * @param locale Locale reference
      */
     public Date getDateFullWithActiveLocale(String stringDate, Locale locale) throws ParseException {
         return new SimpleDateFormat(dateFullPattern, locale).parse(stringDate);
@@ -297,7 +297,7 @@ public class DateFormatter {
      * <p>for value of default locale and format for Time pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with Time pattern hh:mm:ss
-     * @param stringDate String
+     * @param stringDate String reference
      */
     public Date getTimeDefaultLocale(String stringDate) throws ParseException {
         return new SimpleDateFormat(timePattern, new Locale(defaultLocale)).parse(stringDate);
@@ -309,8 +309,8 @@ public class DateFormatter {
      * <p>for value of default locale and format for Time pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with Time pattern hh:mm:ss
-     * @param stringDate String
-     * @param locale Locale
+     * @param stringDate String reference
+     * @param locale Locale reference
      */
     public Date getTimeWithActiveLocale(String stringDate, Locale locale) throws ParseException {
         return new SimpleDateFormat(timePattern, locale).parse(stringDate);
@@ -322,7 +322,7 @@ public class DateFormatter {
      * <p>for value of default locale and format for month pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with Month pattern MMMM
-     * @param stringDate String
+     * @param stringDate String reference
      */
     public Date getMonthDefaultLocale(String StringDate) throws ParseException {
         return new SimpleDateFormat(monthPattern, new Locale(defaultLocale)).parse(StringDate);
@@ -334,8 +334,8 @@ public class DateFormatter {
      * <p>for value of default locale and format for month pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with Month pattern MMMM
-     * @param stringDate String
-     * @param locale Locale
+     * @param stringDate String reference
+     * @param locale Locale reference
      */
     public Date getMonthWithActiveLocale(String stringDate, Locale locale) throws ParseException {
         return new SimpleDateFormat(monthPattern, locale).parse(stringDate);
@@ -347,7 +347,7 @@ public class DateFormatter {
      * <p>for value of default locale and format for year pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with Month pattern yyyy
-     * @param stringDate String
+     * @param stringDate String reference
      */
     public Date getYearDefaultLocale(String stringDate) throws ParseException {
         return new SimpleDateFormat(yearPattern, new Locale(defaultLocale)).parse(stringDate);
@@ -359,8 +359,8 @@ public class DateFormatter {
      * <p>for value of default locale and format for year pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with Month pattern yyyy
-     * @param stringDate String
-     * @param locale Locale
+     * @param stringDate String reference
+     * @param locale Locale reference
      */
     public Date getYearWithActiveLocale(String stringDate, Locale locale) throws ParseException {
         return new SimpleDateFormat(yearPattern, locale).parse(stringDate); 
@@ -372,7 +372,7 @@ public class DateFormatter {
      * <p>for value of default locale and format for year & year pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with Month pattern MMMM-yyyy
-     * @param stringDate String
+     * @param stringDate String reference
      */
     public Date getMonthAndYearDefaultLocale(String stringDate) throws ParseException {
         return new SimpleDateFormat(monthAndYearPatern, new Locale(defaultLocale)).parse(stringDate);
@@ -384,8 +384,8 @@ public class DateFormatter {
      * <p>for value of default locale and format for year & year pattern are configured in application.properties</p>
      * 
      * @return Date return value is Date with Month pattern MMMM-yyyy
-     * @param stringDate String
-     * @param locale Locale
+     * @param stringDate String reference
+     * @param locale Locale reference
      */
     public Date getMonthAndYearWithActiveLocale(String stringDate, Locale locale) throws ParseException {
         return new SimpleDateFormat(monthAndYearPatern, locale).parse(stringDate);
