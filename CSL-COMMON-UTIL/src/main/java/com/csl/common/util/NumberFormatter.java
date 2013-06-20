@@ -10,16 +10,16 @@ import java.text.ParseException;
 import java.util.Locale;
 
 /**
- * NumberFormatter untuk memformat dan mempasring dari String dan number class
- * ini dimange oleh spring.
+ * NumberFormatter function is to format and parse from String to Number.
+ * Managed by Spring.
  *
  * @author Deni Husni Fahri Rizal
  *
- * @param minFractionDigit jumlah minimum digit
- * @param maxFractionDigit jumlah maximum digit
- * @param defaultLocale locale default dari aplikasi
- * @param activeLocale locale yang active atau dipake di apliaksi bisa di ambil
- * dari session apliaksi atau local sessison apliaksi
+ * @param minFractionDigit total minimum digit
+ * @param maxFractionDigit total maximum digit
+ * @param defaultLocale default local from application, see application.properties
+ * @param activeLocale active locale. locale that used by application, get locale from local session or application session
+ * 
  */
 public class NumberFormatter {
 
