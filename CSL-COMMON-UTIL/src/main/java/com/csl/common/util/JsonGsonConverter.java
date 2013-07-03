@@ -12,7 +12,7 @@ import com.google.gson.JsonParser;
 
 /**
  * JSON Conveter Class Utility untuk mengenerate JSON dari Java Object dan mendapatkan Java Object dari JSON.
- * <p>JSONConverter Class yang di manage oleh Spring.
+ * <p>JsonGsonConverter Class yang di manage oleh Spring.
  * @author Deni Husni Fahri Rizal
  * @author Zulfi Adi Harianto 
  * @param jsonPatternDateFormat merupakan pattern dari Date yang akan di pakai oleh Engine GSON.
@@ -20,7 +20,7 @@ import com.google.gson.JsonParser;
  * @param keyName paremeter berupa nama variable pada Class yang akan diambil 
  * 
  */
-public class JSONConverter {
+public class JsonGsonConverter {
 
     private String jsonPatternDateFormat;
 

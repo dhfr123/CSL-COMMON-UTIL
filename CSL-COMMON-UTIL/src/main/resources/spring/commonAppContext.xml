@@ -6,7 +6,7 @@
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
     <context:property-placeholder location="classpath*:application.properties" />
-    <bean id="dateFormater" class="com.csl.common.util.DateFormatter">
+    <bean id="dateFormater" class="com.csl.common.util.DateFormatter" lazy-init="true">
         <property name="defaultLocale" value="${common.util.defaultLocale}"/>
         <property name="datePattern" value="${common.util.datePattern}"/>
         <property name="timePattern" value="${common.util.timePattern}"/>
@@ -17,10 +17,14 @@
         <property name="monthAndYearPatern" value="${common.util.monthAndYearPatern}"/>
     </bean>
     
-    <bean id="numberFormatter" class="com.csl.common.util.NumberFormatter">
+    <bean id="numberFormatter" class="com.csl.common.util.NumberFormatter" lazy-init="true" >
         <property name="defaultLocale" value="${common.util.defaultLocale}"/>
         <property name="minFractionDigit" value="${common.util.maxFractionDigit}"/>
         <property name="maxFractionDigit" value="${common.util.minFractionDigit}"/>
+    </bean>
+    
+    <bean id="jsonGsonConverter" class="com.csl.common.util.JsonGsonConverter" lazy-init="true" >
+        <property name="jsonPatternDateFormat" value="${common.util.datePattern}"/>
     </bean>
     
 </beans>

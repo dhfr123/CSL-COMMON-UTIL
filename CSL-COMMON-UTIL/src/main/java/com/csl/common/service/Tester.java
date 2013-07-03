@@ -5,6 +5,7 @@
 package com.csl.common.service;
 
 import com.csl.common.util.DateFormatter;
+import org.springframework.util.StringUtils;
 
 /**
  *
@@ -19,5 +20,7 @@ public class Tester {
         // TODO code application logic here
         DateFormatter dateFormater=  (DateFormatter)CommonUtilService.getService("dateFormater");
         System.out.println(dateFormater.getDayPattern());
+        
+      
     }
 }
