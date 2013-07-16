@@ -22,4 +22,5 @@ public class CommonUtilConstant {
     public static final String YEAR = "year";
     public static final String WEEK = "week";
     
+    
 }
